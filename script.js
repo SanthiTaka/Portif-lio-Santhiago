@@ -6,9 +6,8 @@ const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 
 menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
+  nav.classList.toggle("open");
 });
-
 
 // =========================================
 // FECHAR MENU AO CLICAR EM UM LINK
@@ -16,16 +15,11 @@ menuToggle.addEventListener("click", () => {
 
 const navLinks = document.querySelectorAll(".nav-link");
 
-navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("open");
-
-    });
-
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+  });
 });
-
 
 // =========================================
 // LINK ATIVO DO MENU
@@ -34,38 +28,28 @@ navLinks.forEach(link => {
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", () => {
+  let currentSection = "";
 
-    let currentSection = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
 
-    sections.forEach(section => {
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
+    }
+  });
 
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
 
-        if (window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight) {
-
-            currentSection = section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${currentSection}`) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
 });
-
 
 // =========================================
 // FORMULÁRIO
@@ -74,38 +58,12 @@ window.addEventListener("scroll", () => {
 const contactForm = document.getElementById("contactForm");
 
 contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    event.preventDefault();
+  alert(
+    "Mensagem enviada com sucesso! " +
+      "A funcionalidade de envio por e-mail será implementada posteriormente.",
+  );
 
-    alert(
-        "Mensagem enviada com sucesso! " +
-        "A funcionalidade de envio por e-mail será implementada posteriormente."
-    );
-
-    contactForm.reset();
-
-});
-
-
-// =========================================
-// BOTÕES DE IDIOMA
-// =========================================
-
-const languageButtons =
-    document.querySelectorAll(".language-button");
-
-languageButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        languageButtons.forEach(item => {
-            item.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        // A tradução PT/EN será implementada no Lab01S02.
-
-    });
-
+  contactForm.reset();
 });
