@@ -61,4 +61,5 @@ portfolio/
 
 
     ## 📂 Protótipo Do sistema
-https://github.com/user-attachments/assets/a283d03d-56ca-45c7-8c15-ad3b8b99ffb1
+Link da imagem: https://github.com/user-attachments/assets/a283d03d-56ca-45c7-8c15-ad3b8b99ffb1
+Link do Figma: https://www.figma.com/design/izx6TdUXkzZNpM93e3PNna/Untitled?node-id=0-1&t=Q2YuRcRiCc9hJUST-1
