@@ -56,7 +56,7 @@ portfolio/
 ├── README.md
 │
 └── assets/
-    └── imagens/ [Arquivos.zip](https://github.com/user-attachments/files/31324897/Arquivos.zip)
+    └── imagens/ Link do Zip das imagens: https://github.com/user-attachments/files/31324897/Arquivos.zip
 
 
 
