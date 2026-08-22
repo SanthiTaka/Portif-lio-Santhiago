@@ -61,4 +61,4 @@ portfolio/
 
 
     ## 📂 Protótipo Do sistema
-<img width="4006" height="13271" alt="Prototipo portifolio" src="https://github.com/user-attachments/assets/a283d03d-56ca-45c7-8c15-ad3b8b99ffb1" />
+https://github.com/user-attachments/assets/a283d03d-56ca-45c7-8c15-ad3b8b99ffb1
