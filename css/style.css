@@ -500,25 +500,25 @@ textarea {
 
 .about-info li {
   margin-bottom: 7px;
-  color: #666666;
+  color: white;
   font-size: 0.85rem;
 }
 
 .objective {
   margin-top: 50px;
   padding: 30px;
-  background: #5200bb;
-  border: 1px solid #8c33ff;
+  background: white;
+  border: 1px solid #808080;
   color: white;
 }
 
 .objective h3 {
   margin-bottom: 10px;
-  color: white;
+  color: #5200bb;
 }
 
 .objective p {
-  color: white;
+  color: #5200bb;
 }
 
 /* =========================================
