@@ -148,7 +148,7 @@ textarea {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #5200bb;
+  color: white;
 }
 
 .hero h1 {
@@ -283,7 +283,6 @@ textarea {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid #cccccc;
   background: #ffffff;
 
   font-size: 0.7rem;
@@ -309,11 +308,7 @@ textarea {
   padding: 0;
 }
 
-/* HOVER */
-.social-links a:hover {
-  background: #5200bb;
-  color: #ffffff;
-}
+
 
 /* Mantém o ícone do GitHub proporcional no hover */
 .social-links a:hover img {
@@ -325,7 +320,7 @@ textarea {
 ========================================= */
 
 .image-placeholder {
-  width: 100%;
+  width: 500px;
   height: 500px;
 
   display: flex;
@@ -419,6 +414,11 @@ textarea {
   color: #ffffff;
 }
 
+.section-purple {
+  background: #5200bb;
+  color: #ffffff;
+}
+
 .section-header {
   max-width: 700px;
   margin-bottom: 70px;
@@ -477,7 +477,7 @@ textarea {
 .about-text > p {
   max-width: 700px;
   margin-bottom: 20px;
-  color: #555555;
+  color: white;
 }
 
 .about-info {
