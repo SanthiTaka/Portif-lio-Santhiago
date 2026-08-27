@@ -267,3 +267,307 @@ techSlider.addEventListener(
   },
   { passive: false }
 );
+
+// =========================================
+// SLIDER DE PROJETOS
+// =========================================
+
+const projectsSlider =
+  document.getElementById("projectsSlider");
+
+const projectsPrev =
+  document.getElementById("projectsPrev");
+
+const projectsNext =
+  document.getElementById("projectsNext");
+
+const projectsDots =
+  document.getElementById("projectsDots");
+
+const projectCards =
+  document.querySelectorAll(
+    "#projectsSlider .project-card"
+  );
+
+
+// =========================================
+// QUANTIDADE DE CARDS VISÍVEIS
+// =========================================
+
+function getCardsPerPage() {
+
+  if (window.innerWidth <= 600) {
+
+    return 1;
+
+  }
+
+  if (window.innerWidth <= 900) {
+
+    return 2;
+
+  }
+
+  return 3;
+
+}
+
+
+// =========================================
+// IR PARA PRÓXIMOS PROJETOS
+// =========================================
+
+projectsNext.addEventListener("click", () => {
+
+  const cardWidth =
+    projectCards[0].offsetWidth + 25;
+
+  projectsSlider.scrollBy({
+
+    left: cardWidth,
+
+    behavior: "smooth",
+
+  });
+
+});
+
+
+// =========================================
+// VOLTAR PROJETOS
+// =========================================
+
+projectsPrev.addEventListener("click", () => {
+
+  const cardWidth =
+    projectCards[0].offsetWidth + 25;
+
+  projectsSlider.scrollBy({
+
+    left: -cardWidth,
+
+    behavior: "smooth",
+
+  });
+
+});
+
+
+// =========================================
+// ARRASTAR COM MOUSE
+// =========================================
+
+let projectsDragging = false;
+
+let projectsStartX;
+
+let projectsScrollLeft;
+
+
+projectsSlider.addEventListener(
+  "mousedown",
+  (event) => {
+
+    projectsDragging = true;
+
+    projectsSlider.classList.add("dragging");
+
+    projectsStartX =
+      event.pageX -
+      projectsSlider.offsetLeft;
+
+    projectsScrollLeft =
+      projectsSlider.scrollLeft;
+
+  }
+);
+
+
+projectsSlider.addEventListener(
+  "mouseleave",
+  () => {
+
+    projectsDragging = false;
+
+    projectsSlider.classList.remove(
+      "dragging"
+    );
+
+  }
+);
+
+
+projectsSlider.addEventListener(
+  "mouseup",
+  () => {
+
+    projectsDragging = false;
+
+    projectsSlider.classList.remove(
+      "dragging"
+    );
+
+  }
+);
+
+
+projectsSlider.addEventListener(
+  "mousemove",
+  (event) => {
+
+    if (!projectsDragging) return;
+
+    event.preventDefault();
+
+    const x =
+      event.pageX -
+      projectsSlider.offsetLeft;
+
+    const distance =
+      (x - projectsStartX) * 2;
+
+    projectsSlider.scrollLeft =
+      projectsScrollLeft - distance;
+
+  }
+);
+
+
+// =========================================
+// CRIAR INDICADORES
+// =========================================
+
+function createProjectDots() {
+
+  projectsDots.innerHTML = "";
+
+  const cardsPerPage =
+    getCardsPerPage();
+
+  const totalPages =
+    Math.ceil(
+      projectCards.length /
+      cardsPerPage
+    );
+
+
+  for (
+    let i = 0;
+    i < totalPages;
+    i++
+  ) {
+
+    const dot =
+      document.createElement("button");
+
+    dot.classList.add(
+      "projects-dot"
+    );
+
+    dot.setAttribute(
+      "aria-label",
+      `Ir para página ${i + 1}`
+    );
+
+
+    dot.addEventListener(
+      "click",
+      () => {
+
+        const card =
+          projectCards[
+            i * cardsPerPage
+          ];
+
+
+        if (card) {
+
+          projectsSlider.scrollTo({
+
+            left:
+              card.offsetLeft - 10,
+
+            behavior:
+              "smooth",
+
+          });
+
+        }
+
+      }
+    );
+
+
+    projectsDots.appendChild(dot);
+
+  }
+
+
+  updateProjectDots();
+
+}
+
+
+// =========================================
+// ATUALIZAR INDICADORES
+// =========================================
+
+function updateProjectDots() {
+
+  const cardsPerPage =
+    getCardsPerPage();
+
+  const currentPage =
+    Math.round(
+      projectsSlider.scrollLeft /
+      (
+        projectsSlider.scrollWidth /
+        Math.ceil(
+          projectCards.length /
+          cardsPerPage
+        )
+      )
+    );
+
+
+  const dots =
+    document.querySelectorAll(
+      ".projects-dot"
+    );
+
+
+  dots.forEach(
+    (dot, index) => {
+
+      dot.classList.toggle(
+        "active",
+        index === currentPage
+      );
+
+    }
+  );
+
+}
+
+
+projectsSlider.addEventListener(
+  "scroll",
+  updateProjectDots
+);
+
+
+// =========================================
+// RECRIAR INDICADORES AO REDIMENSIONAR
+// =========================================
+
+window.addEventListener(
+  "resize",
+  createProjectDots
+);
+
+
+// =========================================
+// INICIALIZAÇÃO
+// =========================================
+
+createProjectDots();
