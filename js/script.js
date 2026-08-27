@@ -55,17 +55,81 @@ window.addEventListener("scroll", () => {
 // FORMULÁRIO
 // =========================================
 
+// =========================================
+// FORMULÁRIO DE CONTATO
+// =========================================
+
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
+
   event.preventDefault();
 
-  alert(
-    "Mensagem enviada com sucesso! " +
-      "A funcionalidade de envio por e-mail será implementada posteriormente.",
-  );
+  const submitButton =
+    contactForm.querySelector('button[type="submit"]');
 
-  contactForm.reset();
+  const originalText =
+    submitButton.textContent;
+
+  submitButton.disabled = true;
+
+  submitButton.textContent = "Enviando...";
+
+  try {
+
+    const response = await fetch(
+      contactForm.action,
+      {
+        method: "POST",
+
+        body: new FormData(contactForm),
+
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+
+
+    if (response.ok) {
+
+      alert(
+        "Mensagem enviada com sucesso! " +
+        "Obrigado pelo contato."
+      );
+
+      contactForm.reset();
+
+    } else {
+
+      alert(
+        "Não foi possível enviar a mensagem. " +
+        "Tente novamente."
+      );
+
+    }
+
+  } catch (error) {
+
+    console.error(
+      "Erro ao enviar formulário:",
+      error
+    );
+
+    alert(
+      "Ocorreu um erro ao enviar a mensagem. " +
+      "Tente novamente."
+    );
+
+  } finally {
+
+    submitButton.disabled = false;
+
+    submitButton.textContent =
+      originalText;
+
+  }
+
 });
 
 // =========================================
