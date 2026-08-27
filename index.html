@@ -63,216 +63,165 @@
 
             <div class="social-links">
               <a href="#" aria-label="GitHub"
-                ><img src="/assets/icons/logotipo-do-github.png" alt="Logo GitHub"
+                ><img
+                  src="/assets/icons/logotipo-do-github.png"
+                  alt="Logo GitHub"
               /></a>
               <a href="#" aria-label="LinkedIn"
-                ><img src="/assets/icons/logo-do-linkedin.png" alt="Logo Linkedin"
+                ><img
+                  src="/assets/icons/logo-do-linkedin.png"
+                  alt="Logo Linkedin"
               /></a>
               <a href="mailto:seuemail@email.com" aria-label="E-mail"
-                ><img src="/assets/icons/logotipo-do-instagram.png" alt="Logo Instagram"
+                ><img
+                  src="/assets/icons/logotipo-do-instagram.png"
+                  alt="Logo Instagram"
               /></a>
             </div>
           </div>
 
           <div class="hero-image">
             <div class="image-placeholder">
-              <img
-                src="/assets/Foto Santhiago.jpeg"
-                alt=""
-              />
+              <img src="/assets/Foto Santhiago.jpeg" alt="" />
             </div>
           </div>
         </div>
 
-<!-- ================= TECNOLOGIAS ================= -->
+        <!-- ================= TECNOLOGIAS ================= -->
 
-<section class="tech-section" id="tecnologias">
+        <section class="tech-section" id="tecnologias">
+          <div class="container">
+            <div class="tech-header">
+              <p class="eyebrow">Tecnologias e ferramentas</p>
+              <h2>O que utilizo no desenvolvimento</h2>
+            </div>
 
-  <div class="container">
+            <div class="tech-slider-wrapper">
+              <!-- Botão anterior -->
+              <button
+                class="slider-button slider-prev"
+                id="techPrev"
+                aria-label="Tecnologia anterior"
+              >
+                &#10094;
+              </button>
 
-    <div class="tech-header">
-      <p class="eyebrow">Tecnologias e ferramentas</p>
-      <h2>O que utilizo no desenvolvimento</h2>
-    </div>
+              <!-- Área do slider -->
+              <div class="tech-slider" id="techSlider">
+                <!-- HTML -->
+                <article class="tech-card">
+                  <div class="tech-icon html-icon">&lt;/&gt;</div>
 
-    <div class="tech-slider-wrapper">
+                  <h3>HTML5</h3>
 
-      <!-- Botão anterior -->
-      <button
-        class="slider-button slider-prev"
-        id="techPrev"
-        aria-label="Tecnologia anterior"
-      >
-        &#10094;
-      </button>
+                  <p>Estruturação e semântica de páginas web.</p>
 
-      <!-- Área do slider -->
-      <div class="tech-slider" id="techSlider">
+                  <span class="tech-line"></span>
+                </article>
 
-        <!-- HTML -->
-        <article class="tech-card">
-          <div class="tech-icon html-icon">
-            &lt;/&gt;
+                <!-- CSS -->
+                <article class="tech-card">
+                  <div class="tech-icon css-icon">#</div>
+
+                  <h3>CSS3</h3>
+
+                  <p>Estilização, layouts e responsividade.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- JavaScript -->
+                <article class="tech-card">
+                  <div class="tech-icon js-icon">JS</div>
+
+                  <h3>JavaScript</h3>
+
+                  <p>Interatividade e lógica para aplicações web.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- React -->
+                <article class="tech-card">
+                  <div class="tech-icon react-icon">⚛</div>
+
+                  <h3>React</h3>
+
+                  <p>Desenvolvimento de interfaces modernas.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- Git -->
+                <article class="tech-card">
+                  <div class="tech-icon git-icon">◆</div>
+
+                  <h3>Git</h3>
+
+                  <p>Controle de versão e gerenciamento de código.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- GitHub -->
+                <article class="tech-card">
+                  <div class="tech-icon github-icon">GH</div>
+
+                  <h3>GitHub</h3>
+
+                  <p>Hospedagem e colaboração em projetos.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- Figma -->
+                <article class="tech-card">
+                  <div class="tech-icon figma-icon">F</div>
+
+                  <h3>Figma</h3>
+
+                  <p>Prototipação e design de interfaces.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- Java -->
+                <article class="tech-card">
+                  <div class="tech-icon java-icon">☕</div>
+
+                  <h3>Java</h3>
+
+                  <p>Desenvolvimento de aplicações e sistemas.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+
+                <!-- MySQL -->
+                <article class="tech-card">
+                  <div class="tech-icon mysql-icon">DB</div>
+
+                  <h3>MySQL</h3>
+
+                  <p>Banco de dados relacional.</p>
+
+                  <span class="tech-line"></span>
+                </article>
+              </div>
+
+              <!-- Botão próximo -->
+              <button
+                class="slider-button slider-next"
+                id="techNext"
+                aria-label="Próxima tecnologia"
+              >
+                &#10095;
+              </button>
+            </div>
+
+            <!-- Indicadores -->
+            <div class="tech-dots" id="techDots"></div>
           </div>
-
-          <h3>HTML5</h3>
-
-          <p>
-            Estruturação e semântica de páginas web.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- CSS -->
-        <article class="tech-card">
-          <div class="tech-icon css-icon">
-            #
-          </div>
-
-          <h3>CSS3</h3>
-
-          <p>
-            Estilização, layouts e responsividade.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- JavaScript -->
-        <article class="tech-card">
-          <div class="tech-icon js-icon">
-            JS
-          </div>
-
-          <h3>JavaScript</h3>
-
-          <p>
-            Interatividade e lógica para aplicações web.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- React -->
-        <article class="tech-card">
-          <div class="tech-icon react-icon">
-            ⚛
-          </div>
-
-          <h3>React</h3>
-
-          <p>
-            Desenvolvimento de interfaces modernas.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- Git -->
-        <article class="tech-card">
-          <div class="tech-icon git-icon">
-            ◆
-          </div>
-
-          <h3>Git</h3>
-
-          <p>
-            Controle de versão e gerenciamento de código.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- GitHub -->
-        <article class="tech-card">
-          <div class="tech-icon github-icon">
-            GH
-          </div>
-
-          <h3>GitHub</h3>
-
-          <p>
-            Hospedagem e colaboração em projetos.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- Figma -->
-        <article class="tech-card">
-          <div class="tech-icon figma-icon">
-            F
-          </div>
-
-          <h3>Figma</h3>
-
-          <p>
-            Prototipação e design de interfaces.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- Java -->
-        <article class="tech-card">
-          <div class="tech-icon java-icon">
-            ☕
-          </div>
-
-          <h3>Java</h3>
-
-          <p>
-            Desenvolvimento de aplicações e sistemas.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-
-        <!-- MySQL -->
-        <article class="tech-card">
-          <div class="tech-icon mysql-icon">
-            DB
-          </div>
-
-          <h3>MySQL</h3>
-
-          <p>
-            Banco de dados relacional.
-          </p>
-
-          <span class="tech-line"></span>
-        </article>
-
-      </div>
-
-
-      <!-- Botão próximo -->
-      <button
-        class="slider-button slider-next"
-        id="techNext"
-        aria-label="Próxima tecnologia"
-      >
-        &#10095;
-      </button>
-
-    </div>
-
-
-    <!-- Indicadores -->
-    <div class="tech-dots" id="techDots"></div>
-
-  </div>
-
-</section>
+        </section>
       </section>
 
       <!-- ================= SOBRE ================= -->
@@ -288,7 +237,7 @@
           <div class="about-content">
             <div class="about-image">
               <div class="image-placeholder">
-                <img src="/assets/Imagem Engenharia de software.webp" alt="">
+                <img src="/assets/Imagem Engenharia de software.webp" alt="" />
               </div>
             </div>
 
@@ -379,15 +328,18 @@
 
             <article class="project-card">
               <div class="project-image">
-                <span>Imagem do projeto</span>
+                <img
+                  src="assets/images/projects/projeto-01.png.png"
+                  alt="Tela do projeto Meu"
+                />
               </div>
 
               <div class="project-content">
                 <small>Projeto 01</small>
 
-                <h3>Projeto Meu</h3>
+                <h3>QuickList</h3>
 
-                <p>Aplicação web desenvolvida para gerenciamento de tarefas.</p>
+                <p>Um gerenciador de lista de mercado, perfeito para adicionar e remover itens de lista de compra.</p>
 
                 <div class="technologies">
                   <span>HTML</span>
@@ -419,17 +371,19 @@
 
             <article class="project-card">
               <div class="project-image">
-                <span>Imagem do projeto</span>
+                <img
+                  src="assets/images/projects/projeto-02.png"
+                  alt="Tela do Portfólio Pessoal"
+                />
               </div>
 
               <div class="project-content">
                 <small>Projeto 02</small>
 
-                <h3>Portfólio Pessoal</h3>
+                <h3>Convert</h3>
 
                 <p>
-                  Portfólio pessoal responsivo com foco em performance e
-                  experiência do usuário.
+                  Um sistema capaz de converter qualquer tipo de moeda para a desejada, com um design intuitivo.
                 </p>
 
                 <div class="technologies">
@@ -462,17 +416,19 @@
 
             <article class="project-card">
               <div class="project-image">
-                <span>Imagem do projeto</span>
+                <img
+                  src="assets/images/projects/projeto-03.png"
+                  alt="Tela da Landing Page"
+                />
               </div>
 
               <div class="project-content">
                 <small>Projeto 03</small>
 
-                <h3>Landing Page</h3>
+                <h3>Travelgram</h3>
 
                 <p>
-                  Landing page institucional desenvolvida para apresentação de
-                  um produto digital.
+                  Uma simulação de uma rede social com fotos e perfil. Sendo uma página responsiva e totalmente interativa
                 </p>
 
                 <div class="technologies">
