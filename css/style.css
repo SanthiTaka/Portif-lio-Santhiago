@@ -1780,3 +1780,631 @@ textarea {
     height: 220px;
   }
 }
+
+/* =========================================
+   RESPONSIVIDADE EXTRA
+   AJUSTES GERAIS
+========================================= */
+
+/* Evita qualquer rolagem horizontal indesejada */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Imagens nunca ultrapassam o elemento pai */
+img {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+   até 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+  /* ---------- CONTAINER ---------- */
+
+  .container {
+    width: min(92%, var(--container));
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .header-content {
+    height: 70px;
+  }
+
+  .nav {
+    top: 70px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-content {
+    min-height: auto;
+    padding: 70px 0 80px;
+    gap: 45px;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+  }
+
+  .hero h2 {
+    font-size: 1.35rem;
+  }
+
+  .hero-description {
+    max-width: 600px;
+  }
+
+  .hero-image .image-placeholder {
+    width: min(100%, 500px);
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .hero-image .image-placeholder img {
+    width: 300px;
+    height: 300px;
+    max-width: 80%;
+  }
+
+
+  /* ---------- SOBRE ---------- */
+
+  .about-content {
+    gap: 45px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image .image-placeholder {
+    width: min(100%, 500px);
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .about-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .language-buttons {
+    top: -80px;
+  }
+
+
+  /* ---------- PROJETOS ---------- */
+
+  .projects-slider {
+    gap: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .projects-slider .project-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+
+  .projects-prev {
+    left: -10px;
+  }
+
+  .projects-next {
+    right: -10px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap;
+  }
+
+
+  /* ---------- EXPERIÊNCIAS ---------- */
+
+  .experiences {
+    width: 100%;
+  }
+
+  .experience {
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+  }
+
+
+  /* ---------- CONTATO ---------- */
+
+  .contact-grid {
+    gap: 50px;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer {
+    padding: 60px 0;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+   até 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* ---------- GERAL ---------- */
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .header-content {
+    height: 65px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+
+  .nav {
+    top: 65px;
+    padding: 20px 16px;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .nav-link.active::after {
+    bottom: 3px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 60px;
+    gap: 40px;
+  }
+
+  /* Texto depois da imagem */
+  .hero-text {
+    order: 2;
+  }
+
+  /* Imagem primeiro */
+  .hero-image {
+    order: 1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 15vw, 4rem);
+    letter-spacing: -2px;
+    line-height: 0.95;
+    margin-bottom: 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+  .social-links {
+    margin-top: 5px;
+  }
+
+  .hero-image .image-placeholder {
+    width: min(100%, 330px);
+    height: 330px;
+    margin: 0 auto;
+  }
+
+  .hero-image .image-placeholder img {
+    width: 230px;
+    height: 230px;
+    max-width: 75%;
+  }
+
+
+  /* ---------- TECNOLOGIAS ---------- */
+
+  .tech-section {
+    padding: 60px 0 70px;
+  }
+
+  .tech-header {
+    margin-bottom: 25px;
+  }
+
+  .tech-header h2 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .tech-slider {
+    gap: 15px;
+    padding: 15px 35px 30px;
+  }
+
+  .tech-card {
+    flex: 0 0 calc(100vw - 90px);
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .tech-card:hover {
+    transform: none;
+  }
+
+  .slider-button {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .slider-prev {
+    left: -2px;
+  }
+
+  .slider-next {
+    right: -2px;
+  }
+
+
+  /* ---------- SOBRE ---------- */
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    letter-spacing: -1px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image .image-placeholder {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  /* Botões de idioma não ficam mais fora da tela */
+  .language-buttons {
+    position: static;
+    display: flex;
+    width: fit-content;
+    margin: 0 0 25px auto;
+  }
+
+  .language-button {
+    padding: 8px 13px;
+  }
+
+  .about-description p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+
+  .about-info > div {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .about-info > div:last-child {
+    border-bottom: none;
+  }
+
+  .objective {
+    margin-top: 35px;
+    padding: 22px;
+  }
+
+
+  /* ---------- PROJETOS ---------- */
+
+  .projects-slider {
+    gap: 15px;
+    padding: 15px 30px 30px;
+  }
+
+  /* Um projeto por vez no celular */
+  .projects-slider .project-card {
+    flex: 0 0 100%;
+  }
+
+  .projects-slider .project-card:hover {
+    transform: none;
+  }
+
+  .projects-slider .project-content {
+    padding: 20px;
+  }
+
+  .projects-slider .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .projects-slider .project-content p {
+    min-height: auto;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .technologies {
+    margin-bottom: 20px;
+  }
+
+  .project-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .project-buttons .button {
+    width: 100%;
+  }
+
+  .projects-slider-button {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .projects-prev {
+    left: -3px;
+  }
+
+  .projects-next {
+    right: -3px;
+  }
+
+  .center-button {
+    margin-top: 35px;
+  }
+
+  .center-button .button {
+    width: 100%;
+  }
+
+
+  /* ---------- EXPERIÊNCIAS ---------- */
+
+  .experiences {
+    border-left: 1px solid #cccccc;
+  }
+
+  .experience {
+    display: block;
+    padding: 0 0 35px 25px;
+  }
+
+  .experience-date {
+    margin-bottom: 12px;
+  }
+
+  .experience-date small {
+    display: block;
+    margin-top: 3px;
+  }
+
+  .experience-content {
+    padding: 20px;
+  }
+
+  .experience-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-content p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- CONTATO ---------- */
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: clamp(2.3rem, 12vw, 3.5rem);
+  }
+
+  .contact-info > p {
+    font-size: 0.9rem;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 25px;
+  }
+
+  .contact-links a {
+    padding: 15px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 13px;
+  }
+
+  .form-group textarea {
+    height: 140px;
+  }
+
+  .contact-form .button {
+    width: 100%;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-copy {
+    align-self: auto;
+    padding-top: 15px;
+    border-top: 1px solid #333333;
+  }
+
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+   até 380px
+========================================= */
+
+@media (max-width: 380px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero-image .image-placeholder {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-image .image-placeholder img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tech-card {
+    flex-basis: calc(100vw - 70px);
+  }
+
+  .project-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    padding-left: 20px;
+  }
+
+  .experience-content {
+    padding: 16px;
+  }
+
+}
