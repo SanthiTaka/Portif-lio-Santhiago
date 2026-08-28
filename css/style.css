@@ -896,6 +896,14 @@ textarea {
   height: 500px;
 }
 
+.about-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
 .about-text {
   position: relative;
 }
@@ -1674,14 +1682,20 @@ textarea {
        Foto continua pequena mesmo no tablet.
     */
 
-  .hero-image .image-placeholder img {
-    width: 300px;
-    height: 300px;
-  }
+  .hero-image .image-placeholder {
+    width: min(100%, 500px);
+    height: 400px;
+    margin: 0 auto;
+}
 
-  .image-placeholder {
-    height: 350px;
-  }
+.hero-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1771,14 +1785,20 @@ textarea {
        Foto ainda menor no celular.
     */
 
-  .hero-image .image-placeholder {
-    height: 300px;
-  }
+.hero-image .image-placeholder {
+    width: min(100%, 330px);
+    height: 330px;
+    margin: 0 auto;
+}
 
-  .hero-image .image-placeholder img {
-    width: 220px;
-    height: 220px;
-  }
+.hero-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 }
 
 /* =========================================
@@ -1853,17 +1873,20 @@ img {
     max-width: 600px;
   }
 
-  .hero-image .image-placeholder {
+.hero-image .image-placeholder {
     width: min(100%, 500px);
     height: 400px;
     margin: 0 auto;
-  }
+}
 
-  .hero-image .image-placeholder img {
-    width: 300px;
-    height: 300px;
-    max-width: 80%;
-  }
+.hero-image .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 
 
   /* ---------- SOBRE ---------- */
