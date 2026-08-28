@@ -901,23 +901,39 @@ textarea {
 }
 
 .language-buttons {
-  display: flex;
-  gap: 0;
   position: absolute;
-  top: 0;
+  top: -200px;
   right: 0;
+  z-index: 100;
 }
 
 .language-button {
   padding: 8px 15px;
   border: 1px solid #cccccc;
   background: #ffffff;
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: 700;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.language-button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.language-button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.language-button:hover {
+  background: #eeeeee;
 }
 
 .language-button.active {
   background: #111111;
   color: #ffffff;
+  border-color: #111111;
 }
 
 .about-text > p {

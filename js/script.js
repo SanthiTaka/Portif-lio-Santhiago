@@ -635,3 +635,67 @@ window.addEventListener(
 // =========================================
 
 createProjectDots();
+
+// =========================================
+// SISTEMA DE IDIOMA - SOBRE MIM
+// =========================================
+
+const languageButtons = document.querySelectorAll(".language-button");
+const languageContents = document.querySelectorAll(
+  ".language-content"
+);
+
+const translatableElements = document.querySelectorAll(
+  "[data-pt][data-en]"
+);
+
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+
+    const selectedLanguage =
+      button.getAttribute("data-language");
+
+    // ================================
+    // ATUALIZA BOTÃO ATIVO
+    // ================================
+
+    languageButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    // ================================
+    // MOSTRA O CONTEÚDO DO IDIOMA
+    // ================================
+
+    languageContents.forEach((content) => {
+
+      const contentLanguage =
+        content.getAttribute("data-language-content");
+
+      if (contentLanguage === selectedLanguage) {
+        content.style.display = "";
+      } else {
+        content.style.display = "none";
+      }
+
+    });
+
+    // ================================
+    // ALTERA TÍTULOS E TEXTOS
+    // ================================
+
+    translatableElements.forEach((element) => {
+
+      const translation =
+        element.getAttribute(`data-${selectedLanguage}`);
+
+      if (translation) {
+        element.textContent = translation;
+      }
+
+    });
+
+  });
+});

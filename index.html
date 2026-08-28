@@ -224,85 +224,220 @@
         </section>
       </section>
 
-      <!-- ================= SOBRE ================= -->
+<!-- ================= SOBRE ================= -->
+<section class="section section-purple" id="sobre">
+  <div class="container">
 
-      <section class="section section-purple" id="sobre">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Sobre mim</p>
+    <div class="section-header">
+      <p class="eyebrow" data-pt="Sobre mim" data-en="About me">
+        Sobre mim
+      </p>
 
-            <h2>Conheça minha trajetória</h2>
-          </div>
+      <h2
+        data-pt="Conheça minha trajetória"
+        data-en="Get to know my journey"
+      >
+        Conheça minha trajetória
+      </h2>
+    </div>
 
-          <div class="about-content">
-            <div class="about-image">
-              <div class="image-placeholder">
-                <img src="/assets/Imagem Engenharia de software.webp" alt="" />
-              </div>
-            </div>
+    <div class="about-content">
 
-            <div class="about-text">
-              <div class="language-buttons"></div>
+      <div class="about-image">
+        <div class="image-placeholder">
+          <img
+            src="/assets/Imagem Engenharia de software.webp"
+            alt="Engenharia de Software"
+          />
+        </div>
+      </div>
 
-              <p>
-                Sou estudante de Engenharia de Software, com interesse em
-                desenvolvimento Front-End, design de interfaces e experiências
-                digitais.
-              </p>
+      <div class="about-text">
 
-              <p>
-                Gosto de unir tecnologia e design para criar interfaces
-                modernas, funcionais e intuitivas.
-              </p>
+        <!-- BOTÕES DE IDIOMA -->
+        <div class="language-buttons">
+          <button
+            class="language-button active"
+            data-language="pt"
+          >
+            PT
+          </button>
 
-              <div class="about-info">
-                <div>
-                  <h3>Formação</h3>
+          <button
+            class="language-button"
+            data-language="en"
+          >
+            EN
+          </button>
+        </div>
 
-                  <ul>
-                    <li>Engenharia de Software</li>
-                    <li>Desenvolvimento Web</li>
-                    <li>Tecnologia</li>
-                  </ul>
-                </div>
+        <!-- APRESENTAÇÃO -->
+        <div class="about-description">
 
-                <div>
-                  <h3>Habilidades</h3>
-
-                  <ul>
-                    <li>HTML / CSS / JavaScript</li>
-                    <li>React</li>
-                    <li>Git / GitHub</li>
-                    <li>Figma</li>
-                    <li>UI / UX Design</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3>Interesses</h3>
-
-                  <ul>
-                    <li>Design de Interfaces</li>
-                    <li>Experiências Digitais</li>
-                    <li>Tecnologia</li>
-                    <li>Inovação</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="objective">
-            <h3>Objetivos</h3>
+          <div class="language-content" data-language-content="pt">
 
             <p>
-              Atuar como desenvolvedor Front-End, contribuindo para projetos que
-              geram impacto real e continuar evoluindo profissionalmente na área
-              de tecnologia.
+              Sou estudante de Engenharia de Software, com interesse em
+              desenvolvimento Front-End, design de interfaces e experiências
+              digitais.
             </p>
+
+            <p>
+              Gosto de unir tecnologia e design para criar interfaces
+              modernas, funcionais e intuitivas.
+            </p>
+
           </div>
+
+          <div
+            class="language-content"
+            data-language-content="en"
+            style="display: none;"
+          >
+
+            <p>
+              I am a Software Engineering student with an interest in
+              Front-End development, interface design, and digital
+              experiences.
+            </p>
+
+            <p>
+              I enjoy combining technology and design to create modern,
+              functional, and intuitive interfaces.
+            </p>
+
+          </div>
+
         </div>
-      </section>
+
+        <!-- INFORMAÇÕES -->
+        <div class="about-info">
+
+          <!-- FORMAÇÃO -->
+          <div>
+            <h3
+              data-pt="Formação"
+              data-en="Education"
+            >
+              Formação
+            </h3>
+
+            <ul class="language-content" data-language-content="pt">
+              <li>Engenharia de Software</li>
+              <li>Desenvolvimento Web</li>
+              <li>Tecnologia</li>
+            </ul>
+
+            <ul
+              class="language-content"
+              data-language-content="en"
+              style="display: none;"
+            >
+              <li>Software Engineering</li>
+              <li>Web Development</li>
+              <li>Technology</li>
+            </ul>
+          </div>
+
+          <!-- HABILIDADES -->
+          <div>
+            <h3
+              data-pt="Habilidades"
+              data-en="Skills"
+            >
+              Habilidades
+            </h3>
+
+            <ul class="language-content" data-language-content="pt">
+              <li>HTML / CSS / JavaScript</li>
+              <li>React</li>
+              <li>Git / GitHub</li>
+              <li>Figma</li>
+              <li>UI / UX Design</li>
+            </ul>
+
+            <ul
+              class="language-content"
+              data-language-content="en"
+              style="display: none;"
+            >
+              <li>HTML / CSS / JavaScript</li>
+              <li>React</li>
+              <li>Git / GitHub</li>
+              <li>Figma</li>
+              <li>UI / UX Design</li>
+            </ul>
+          </div>
+
+          <!-- INTERESSES -->
+          <div>
+            <h3
+              data-pt="Interesses"
+              data-en="Interests"
+            >
+              Interesses
+            </h3>
+
+            <ul class="language-content" data-language-content="pt">
+              <li>Design de Interfaces</li>
+              <li>Experiências Digitais</li>
+              <li>Tecnologia</li>
+              <li>Inovação</li>
+            </ul>
+
+            <ul
+              class="language-content"
+              data-language-content="en"
+              style="display: none;"
+            >
+              <li>Interface Design</li>
+              <li>Digital Experiences</li>
+              <li>Technology</li>
+              <li>Innovation</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- OBJETIVOS -->
+    <div class="objective">
+
+      <h3
+        data-pt="Objetivos"
+        data-en="Goals"
+      >
+        Objetivos
+      </h3>
+
+      <div
+        class="language-content"
+        data-language-content="pt"
+      >
+        <p>
+          Atuar como desenvolvedor Front-End, contribuindo para projetos que
+          geram impacto real e continuar evoluindo profissionalmente na área
+          de tecnologia.
+        </p>
+      </div>
+
+      <div
+        class="language-content"
+        data-language-content="en"
+        style="display: none;"
+      >
+        <p>
+          To work as a Front-End Developer, contributing to projects that
+          create real impact while continuing to grow professionally in the
+          technology field.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       <!-- ================= PROJETOS ================= -->
 
